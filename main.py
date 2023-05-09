@@ -49,12 +49,11 @@ for filepath in filepaths:
     pdf.cell(w=40, h=8, txt="", border=1)
     pdf.cell(w=30, h=8, txt=str(total_sum), border=1, ln=1)
 # add total price
-    pdf.set_font(family="Times", size=10)
-    pdf.cell(w=30, h=8, txt=f"Total Price is:{total_sum}")
+    pdf.set_font(family="Times", size=12, style="B")
+    pdf.cell(w=30, h=8, txt=f"Total Price is:{total_sum}", ln=1)
 # add company name and logo
-    pdf.set_font(family="Times", size=10)
-    pdf.cell(w=30, h=8, txt="MHtech")
-    pdf.image("logo.png")
-
+    pdf.set_font(family="Times", size=16, style="B")
+    pdf.cell(w=25, h=8, txt="MHtech")
+    pdf.image("logo2.png", w=20)
 
     pdf.output(f"Pdfs/{filename}.pdf")
